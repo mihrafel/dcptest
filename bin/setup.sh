@@ -3,9 +3,6 @@ echo "****************************************"
 echo " Setting up Capstone Environment"
 echo "****************************************"
 
-echo "Updating package manager..."
-sudo add-apt-repository -y ppa:deadsnakes/ppa
-
 echo "Installing Python 3.9 and Virtual Environment"
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3.9 python3.9-venv
@@ -18,6 +15,7 @@ echo "Checking the Python version..."
 python3 --version
 
 echo "Creating a Python virtual environment"
+sudo apt-get install python3-venv
 python3 -m venv ~/venv
 
 echo "Configuring the developer environment..."
